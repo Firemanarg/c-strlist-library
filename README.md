@@ -8,8 +8,8 @@
 * **strlst_init**: *Initialize a list of strings (t_strlist) with null pointers and size value as zero*;
 * **strlst_pop_back**: *Remove a node at the end (back) from an string list, and set it's next and prev values to NULL*;
 * **strlst_pop_front**: *Remove a node at the begin (front) from an string list, and set it's next and prev values to NULL*;
-* **strlst_pop_node**: *Remove the specified node from an string list, and set it's next and prev values to NULL*.
-* **strlst_pop**: *Remove a node at an specified position (index) from an string list, and set it's next and prev values to NULL*.
+* **strlst_pop_node**: *Remove the specified node from an string list, and set it's next and prev values to NULL*;
+* **strlst_pop**: *Remove a node at an specified position (index) from an string list, and set it's next and prev values to NULL*;
 * **strlst_print**: *Print a string (fd 1) list following this format*
 	* *filled -> [string1, string2, ..., string_n]*
 	* *empty -> []*;
