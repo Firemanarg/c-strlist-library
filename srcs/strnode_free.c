@@ -6,13 +6,13 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 00:49:49 by lsilva-q          #+#    #+#             */
-/*   Updated: 2022/07/05 01:34:26 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2022/07/05 14:09:32 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "strlist.h"
 
-// Description: Free a node and it's content.
+// Description: Free a node.
 //
 // Arguments: 'node' is the target node to be freed.
 //
