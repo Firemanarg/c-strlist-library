@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 19:00:32 by lsilva-q          #+#    #+#             */
-/*   Updated: 2022/07/05 13:28:14 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:37:21 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 t_strnode	*strlst_push(t_strlist *lst, t_strnode *node, int index)
 {
 	t_strnode	*tmp;
-	int			out;
+	t_strnode	*out;
 
-	out = 0;
+	out = NULL;
 	if (lst == NULL || node == NULL || index < 0 || index > lst->size)
 		return (NULL);
 	if (index == 0 || lst->size == 0)
