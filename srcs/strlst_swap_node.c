@@ -6,7 +6,7 @@
 /*   By: lsilva-q <lsilva-q@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:00:12 by lsilva-q          #+#    #+#             */
-/*   Updated: 2022/07/05 13:18:55 by lsilva-q         ###   ########.fr       */
+/*   Updated: 2022/07/05 16:24:22 by lsilva-q         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 // Return value: 1 if 'lst' is NULL or any of indexes is invalid.
 //				Return 0 if success.
 
-static void	check_update_lst_front_back(t_strlist *lst, t_strnode *node);
 static void	swap_nodes(t_strnode *node1, t_strnode *node2);
 
 int	strlst_swap_node(t_strlist *lst, int index1, int index2)
@@ -37,18 +36,16 @@ int	strlst_swap_node(t_strlist *lst, int index1, int index2)
 		return (0);
 	node1 = strlst_getnode(lst, index1);
 	node2 = strlst_getnode(lst, index2);
-	check_update_lst_front_back(lst, node1);
-	check_update_lst_front_back(lst, node2);
+	if (lst->front == node1)
+		lst->front = node2;
+	else if (lst->front == node2)
+		lst->front = node1;
+	if (lst->back == node1)
+		lst->back = node2;
+	else if (lst->back == node2)
+		lst->back = node1;
 	swap_nodes(node1, node2);
 	return (0);
-}
-
-static void	check_update_lst_front_back(t_strlist *lst, t_strnode *node)
-{
-	if (lst->front == node)
-		lst->front = node;
-	if (lst->back == node)
-		lst->back = node;
 }
 
 static void	swap_nodes(t_strnode *node1, t_strnode *node2)
